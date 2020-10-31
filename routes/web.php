@@ -68,6 +68,34 @@ Route::get('dangki',[
 	'as' => 'dangki',
 	'uses' => 'PageController@dangki'
 ]);
+Route::post('dangki',[
+	'as' => 'dangki',
+	'uses' => 'PageController@postdangki'
+]);
+
+//------------AJAX xử lý form đăng kí
+Route::post('cmnd',[
+	'as' => 'cmnd',
+	'uses' => 'AjaxController@cmnd'
+]);
+
+Route::post('sdt',[
+	'as' => 'sdt',
+	'uses' => 'AjaxController@sdt'
+]);
+
+Route::post('email',[
+	'as' => 'email',
+	'uses' => 'AjaxController@email'
+]);
+
+Route::post('username',[
+	'as' => 'username',
+	'uses' => 'AjaxController@username'
+]);
+//------------AJAX xử lý form đăng kí
+
+
 
 Route::get('dangnhap',[
 	'as' => 'dangnhap',

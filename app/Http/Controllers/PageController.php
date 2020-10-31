@@ -122,6 +122,28 @@ class PageController extends Controller
         return view('pages.dangki');
     }
 
+    public function postdangki(Request $request)
+    {
+        # code...
+        $taikhoan = new TaiKhoan;
+
+        $taikhoan->ID_PhanQuyen = 1;
+        $taikhoan->HoTen = $request->hoten;
+        $taikhoan->GioiTinh = $request->gioitinh;
+        $taikhoan->NgaySinh = $request->ngaysinh;
+        $taikhoan->MatKhau = $request->matkhau;
+        $taikhoan->SDT = $request->sdt;
+        $taikhoan->CMND = $request->cmnd;
+        $taikhoan->NgayCap = $request->ngaycap;
+        $taikhoan->NoiCap = $request->noicap;
+        $taikhoan->Email = $request->email;
+        $taikhoan->Username = $request->username;
+        $taikhoan->DiaChi = $request->diachi;
+
+        dd($taikhoan);
+                
+    }
+
     public function dangnhap()
     {
         # code...
